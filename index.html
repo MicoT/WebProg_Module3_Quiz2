@@ -8,15 +8,21 @@
 </head>
 <body>
     <div class="container">
-        <img class="character" id="image">
-        <h3 class="center" id="hero"></h3>
-        <h3 class="center" id="vision"></h3>
-        <h3 class="center" id="weapon"></h3>
-        <h3 class="center" id="nation"></h3>
-        <h3 class="center" id="affiliation"></h3>
-        <p id=""></p>
-        <input type="number" id="number" class="center" value="1" min="1" max="10">
-        <button onclick="getNewName()" id="select" class="center">PICK A CHARACTER!</button>
+        <img class="character" id="image" style="width: 200px;height: 200px;"/>
+        <div class="text" id="text">
+            <h3 class="center" id="hero" ></h3>
+            <h3 class="center" id="birthdate" ></h3>
+            <h3 class="center" id="vision" ></h3>
+            <h3 class="center" id="weapon" ></h3>
+            <h3 class="center" id="nation" ></h3>
+            <h3 class="center" id="affiliation" ></h3>
+            <h3 class="center" id="constellation" ></h3>
+        </div>
+        <p id="desc"></p>
+        <div class="user-int">
+        <input type="number" id="number"  value="1" min="1" max="10">
+        <button onclick="getNewName()" id="select" >PICK A CHARACTER!</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

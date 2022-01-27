@@ -1,52 +1,62 @@
 function aetherC(){
-    var Aet = document.getElementById("image");
-    Aet.setAttribute('src', 'assets/Aether.png');
-    document.body.appendChild(Aet);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Aether.png');
+    document.body.appendChild(charc);
 }
 function beidouC(){
-    var Bei = document.getElementById("image");
-    Bei.setAttribute('src', 'assets/Beidou.png');
-    document.body.appendChild(Bei);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Beidou.png');
+    document.body.appendChild(charc);
 }
 function albedoC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Albedo.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Albedo.png');
+    document.body.appendChild(charc);
 }
 function noelleC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Noelle.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Noelle.png');
+    document.body.appendChild(charc);
 }
 function hutaoC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Hutao.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Hutao.png');
+    document.body.appendChild(charc);
 }
 function jeanC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Jean.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Jean.png');
+    document.body.appendChild(charc);
 }
 function raidenC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Raiden.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Raiden.png');
+    document.body.appendChild(charc);
 }
 function kleeC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Klee.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Klee.png');
+    document.body.appendChild(charc);
 }
 function razorC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Razor.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Razor.png');
+    document.body.appendChild(charc);
 }
 function eulaC(){
-    var Alb = document.getElementById("image");
-    Alb.setAttribute('src', 'assets/Eula.png');
-    document.body.appendChild(Alb);
+    var charc = document.getElementById("image");
+    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    charc.setAttribute('src', 'assets/Eula.png');
+    document.body.appendChild(charc);
 }
 function getNewName(){
     fetch("https://api.genshin.dev/characters/all")
@@ -62,11 +72,25 @@ function getNewName(){
                     hwep = data[36].weapon;
                     hnat = data[36].nation;
                     haffi = data[36].affiliation;
+                    hconsta = data[36].constellation;
+                    hbirth = data[36].birthday;
+                    hdesc = data[36].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
+                    document.getElementById('hero').style.backgroundColor="blanchedalmond"
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
+                    document.getElementById('vision').style.backgroundColor="blanchedalmond"
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
+                    document.getElementById('weapon').style.backgroundColor="blanchedalmond"
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
+                    document.getElementById('nation').style.backgroundColor="blanchedalmond"
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('affiliation').style.backgroundColor="blanchedalmond"
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('constellation').style.backgroundColor="blanchedalmond"
+                    document.getElementById('birthdate').innerHTML='Birthdate: Unknown';
+                    document.getElementById('birthdate').style.backgroundColor="blanchedalmond"
+                    document.getElementById('desc').innerHTML=hdesc;
+                    document.getElementById('desc').style.backgroundColor="blanchedalmond";
                 }else if (lucky == '2'){
                     beidouC();
                     hname = data[6].name;
@@ -74,11 +98,17 @@ function getNewName(){
                     hwep = data[6].weapon;
                     hnat = data[6].nation;
                     haffi = data[6].affiliation;
+                    hconsta = data[6].constellation;
+                    hbirth = data[6].birthday;
+                    hdesc = data[6].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '3'){
                     albedoC();
                     hname = data[0].name;
@@ -86,11 +116,17 @@ function getNewName(){
                     hwep = data[0].weapon;
                     hnat = data[0].nation;
                     haffi = data[0].affiliation;
+                    hconsta = data[0].constellation;
+                    hbirth = data[0].birthday;
+                    hdesc = data[0].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
-                    document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;;
+                    document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '4'){
                     noelleC();
                     hname = data[25].name;
@@ -98,11 +134,17 @@ function getNewName(){
                     hwep = data[25].weapon;
                     hnat = data[25].nation;
                     haffi = data[25].affiliation;
+                    hconsta = data[25].constellation;
+                    hbirth = data[25].birthday;
+                    hdesc = data[25].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '5'){
                     hutaoC();
                     hname = data[15].name;
@@ -110,11 +152,17 @@ function getNewName(){
                     hwep = data[15].weapon;
                     hnat = data[15].nation;
                     haffi = data[15].affiliation;
+                    hconsta = data[15].constellation;
+                    hbirth = data[15].birthday;
+                    hdesc = data[15].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '6'){
                     jeanC();
                     hname = data[16].name;
@@ -122,11 +170,17 @@ function getNewName(){
                     hwep = data[16].weapon;
                     hnat = data[16].nation;
                     haffi = data[16].affiliation;
+                    hconsta = data[16].constellation;
+                    hbirth = data[16].birthday;
+                    hdesc = data[16].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '7'){
                     raidenC();
                     hname = data[27].name;
@@ -134,11 +188,17 @@ function getNewName(){
                     hwep = data[27].weapon;
                     hnat = data[27].nation;
                     haffi = data[27].affiliation;
+                    hconsta = data[27].constellation;
+                    hbirth = data[27].birthday;
+                    hdesc = data[27].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '8'){
                     kleeC();
                     hname = data[20].name;
@@ -146,11 +206,17 @@ function getNewName(){
                     hwep = data[20].weapon;
                     hnat = data[20].nation;
                     haffi = data[20].affiliation;
+                    hconsta = data[20].constellation;
+                    hbirth = data[20].birthday;
+                    hdesc = data[20].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '9'){
                     razorC();
                     hname = data[28].name;
@@ -158,11 +224,17 @@ function getNewName(){
                     hwep = data[28].weapon;
                     hnat = data[28].nation;
                     haffi = data[28].affiliation;
+                    hconsta = data[28].constellation;
+                    hbirth = data[28].birthday;
+                    hdesc = data[28].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '10'){
                     eulaC();
                     hname = data[11].name;
@@ -170,11 +242,17 @@ function getNewName(){
                     hwep = data[11].weapon;
                     hnat = data[11].nation;
                     haffi = data[11].affiliation;
+                    hconsta = data[11].constellation;
+                    hbirth = data[11].birthday;
+                    hdesc = data[11].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
+                    document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
+                    document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
+                    document.getElementById('desc').innerHTML=hdesc;
                 }
                 
             })   
