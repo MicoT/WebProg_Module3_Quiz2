@@ -1,62 +1,68 @@
 function aetherC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
+    document.getElementById('image-charc').style.border = "8px solid white"
     charc.setAttribute('src', 'assets/Aether.png');
     document.body.appendChild(charc);
 }
 function beidouC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Beidou.png');
     document.body.appendChild(charc);
 }
 function albedoC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Albedo.png');
     document.body.appendChild(charc);
 }
 function noelleC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Noelle.png');
     document.body.appendChild(charc);
 }
 function hutaoC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Hutao.png');
     document.body.appendChild(charc);
 }
 function jeanC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Jean.png');
     document.body.appendChild(charc);
 }
 function raidenC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Raiden.png');
     document.body.appendChild(charc);
 }
 function kleeC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Klee.png');
     document.body.appendChild(charc);
 }
 function razorC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Razor.png');
     document.body.appendChild(charc);
 }
 function eulaC(){
-    var charc = document.getElementById("image");
-    document.getElementById('image').style.backgroundColor = "blanchedalmond"
+    var charc = document.getElementById("image-charc");
+    document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     charc.setAttribute('src', 'assets/Eula.png');
     document.body.appendChild(charc);
+}
+function anemo(){
+    var ele = document.getElementById("image-ele");
+    ele.setAttribute('src', 'assets/anemo.png');
+    document.body.appendChild(ele);
 }
 function getNewName(){
     fetch("https://api.genshin.dev/characters/all")
@@ -67,6 +73,7 @@ function getNewName(){
                 var lucky = document.getElementById('number').value;
                 if (lucky == '1'){
                     aetherC();
+                    anemo();
                     hname = data[36].name;
                     hvision = data[36].vision;
                     hwep = data[36].weapon;
@@ -77,20 +84,28 @@ function getNewName(){
                     hdesc = data[36].description;
                     document.getElementById('hero').innerHTML = 'Name: '+hname;
                     document.getElementById('hero').style.backgroundColor="blanchedalmond"
+                    document.getElementById('hero').style.border="5px solid white"
                     document.getElementById('vision').innerHTML = 'Vision: '+hvision;
                     document.getElementById('vision').style.backgroundColor="blanchedalmond"
+                    document.getElementById('vision').style.border="5px solid white"
                     document.getElementById('weapon').innerHTML = 'Weapon: '+hwep;
                     document.getElementById('weapon').style.backgroundColor="blanchedalmond"
+                    document.getElementById('weapon').style.border="5px solid white"
                     document.getElementById('nation').innerHTML = 'Nation: '+hnat;
                     document.getElementById('nation').style.backgroundColor="blanchedalmond"
+                    document.getElementById('nation').style.border="5px solid white"
                     document.getElementById('affiliation').innerHTML = 'Affiliation: '+haffi;
                     document.getElementById('affiliation').style.backgroundColor="blanchedalmond"
+                    document.getElementById('affiliation').style.border="5px solid white"
                     document.getElementById('constellation').innerHTML='Constellation: '+hconsta;
                     document.getElementById('constellation').style.backgroundColor="blanchedalmond"
+                    document.getElementById('constellation').style.border="5px solid white"
                     document.getElementById('birthdate').innerHTML='Birthdate: Unknown';
                     document.getElementById('birthdate').style.backgroundColor="blanchedalmond"
+                    document.getElementById('birthdate').style.border="5px solid white"
                     document.getElementById('desc').innerHTML=hdesc;
                     document.getElementById('desc').style.backgroundColor="blanchedalmond";
+                    document.getElementById('desc').style.border="5px solid white"
                 }else if (lucky == '2'){
                     beidouC();
                     hname = data[6].name;

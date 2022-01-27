@@ -15,13 +15,18 @@ html{
 }
 .text{
     position: relative;
-    top: 100px;
+    top: 50px;
+}
+.element{
+    position: absolute;
+    top: 520px;
+    left:401px;
 }
 .center{
     border-radius: 10px;
     padding: 20px;
     position: relative;
-    top: 50px;
+    
     left: 30px;
     color: rgb(31, 30, 30);
 }
@@ -30,16 +35,31 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    top: 100px;
+    margin-top: 50px;
+    bottom: 100px;
     
 }
 .character{
+    border-color: azure;
     padding: 10px;
     width: 30%;
     border-radius: 50%;
     position: absolute;
-    top: 200px;
+    top: 250px;
     right:70%;
+}
+.desc{
+    position: relative;
+    padding: 5px;
+    border-radius: 10px;
+    width: 20%;
+    right: 500px;
+    bottom: 70px;
+}
+header{
+    padding-top: 10px;
+    text-align: center;
+    
 }
 h3{
     max-height: 10px;
@@ -47,6 +67,8 @@ h3{
 input{
     padding: 10px;
     border-radius: 10px;
+    font-family: myFirstFont;
+    font-size: 40px;
 }
 button{
     margin-top: 10px;
@@ -66,20 +88,10 @@ button{
 button:hover{
     box-shadow: inset 250px 0 0 0 rgb(235, 208, 160);
 }
-
 #number{
     width: 150px;
     color: black;
 }
-/* div{
-    width: 150px;
-    border: 1px;
-} */
-.desc{
-    position: relative;
-    padding: 5px;
-    border-radius: 10px;
-    width: 30%;
-    right: 400px;
-    bottom: 60px;
+#select{
+    border: 6px solid white;
 }
