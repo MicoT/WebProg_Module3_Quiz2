@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB PROG</title>
     <style>
+        html{
+            background-image: url("bg.jpg");
+            font-family: myFirstFont;
+        }
+        
+        @font-face {
+            font-family: myFirstFont;
+            src: url(zh-cn.ttf);
+        }
         .container{
             position: relative;
             display: flex;
@@ -12,10 +21,13 @@
             align-items: center;
         }
         .center{
-            
+            position: relative;
+            top: 200px;
         }
         .character{
-            margin-left: 44%; 
+            position: absolute;
+            top: 100px;
+            left: 30%;
         }
     </style>
 </head>
@@ -23,9 +35,13 @@
     <div class="container">
         <img class="character" id="image">
         <h1 class="center" id="hero"></h1>
+        <h1 class="center" id="vision"></h1>
+        <h1 class="center" id="weapon"></h1>
+        <h1 class="center" id="nation"></h1>
+        <h1 class="center" id="affiliation"></h1>
         <p id=""></p>
-        <input type="number" id="number" class="center" value="1">
-        <button onclick="getNewName()" class="center" style="top: 80vh">get name</button>
+        <input type="number" id="number" class="center" value="1" min="1" max="10">
+        <button onclick="getNewName()" class="center">PICK A HERO!</button>
     </div>
     <script src="script.js"></script>
 </body>
