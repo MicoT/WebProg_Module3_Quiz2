@@ -2,6 +2,8 @@ function aetherC(){
     var charc = document.getElementById("image-charc");
     document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
     document.getElementById('image-charc').style.border = "8px solid white"
+    document.getElementById("image-charc").width = "200";
+    document.getElementById("image-charc").height = "200";
     charc.setAttribute('src', 'assets/Aether.png');
     document.body.appendChild(charc);
 }
@@ -61,8 +63,80 @@ function eulaC(){
 }
 function anemo(){
     var ele = document.getElementById("image-ele");
+    document.getElementById("image-ele").width = "100";
+    document.getElementById("image-ele").height = "100";
     ele.setAttribute('src', 'assets/anemo.png');
     document.body.appendChild(ele);
+}
+function electro(){
+    var ele = document.getElementById("image-ele");
+    ele.setAttribute('src', 'assets/electro.png');
+    document.body.appendChild(ele);
+}
+function cryo(){
+    var ele = document.getElementById("image-ele");
+    ele.setAttribute('src', 'assets/cryo.png');
+    document.body.appendChild(ele);
+}
+function pyro(){
+    var ele = document.getElementById("image-ele");
+    ele.setAttribute('src', 'assets/pyro.png');
+    document.body.appendChild(ele);
+}
+function geo(){
+    var ele = document.getElementById("image-ele");
+    ele.setAttribute('src', 'assets/geo.png');
+    document.body.appendChild(ele);
+}
+function travelerFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/travelerfull.png');
+    document.body.appendChild(full);
+}
+function beidouFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Beidoufull.png');
+    document.body.appendChild(full);
+}
+function albedoFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Albedofull.png');
+    document.body.appendChild(full);
+}
+function noelleFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Noellefull.png');
+    document.body.appendChild(full);
+}
+function hutaoFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Hutaofull.png');
+    document.body.appendChild(full);
+}
+function jeanFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Jeanfull.png');
+    document.body.appendChild(full);
+}
+function raidenFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Raidenfull.png');
+    document.body.appendChild(full);
+}
+function kleeFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Kleefull.png');
+    document.body.appendChild(full);
+}
+function razorFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Razorfull.png');
+    document.body.appendChild(full);
+}
+function eulaFull(){
+    var full = document.getElementById("image-fullb");
+    full.setAttribute('src', 'assets/Eulafull.png');
+    document.body.appendChild(full);
 }
 function getNewName(){
     fetch("https://api.genshin.dev/characters/all")
@@ -72,8 +146,7 @@ function getNewName(){
                 console.log(data)
                 var lucky = document.getElementById('number').value;
                 if (lucky == '1'){
-                    aetherC();
-                    anemo();
+                    aetherC(),anemo(),travelerFull();
                     hname = data[36].name;
                     hvision = data[36].vision;
                     hwep = data[36].weapon;
@@ -107,7 +180,7 @@ function getNewName(){
                     document.getElementById('desc').style.backgroundColor="blanchedalmond";
                     document.getElementById('desc').style.border="5px solid white"
                 }else if (lucky == '2'){
-                    beidouC();
+                    beidouC(),electro(),beidouFull();
                     hname = data[6].name;
                     hvision = data[6].vision;
                     hwep = data[6].weapon;
@@ -125,7 +198,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '3'){
-                    albedoC();
+                    albedoC(),geo(),albedoFull();
                     hname = data[0].name;
                     hvision = data[0].vision;
                     hwep = data[0].weapon;
@@ -143,7 +216,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '4'){
-                    noelleC();
+                    noelleC(),geo(),noelleFull();
                     hname = data[25].name;
                     hvision = data[25].vision;
                     hwep = data[25].weapon;
@@ -161,7 +234,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '5'){
-                    hutaoC();
+                    hutaoC(),pyro(),hutaoFull();
                     hname = data[15].name;
                     hvision = data[15].vision;
                     hwep = data[15].weapon;
@@ -179,7 +252,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '6'){
-                    jeanC();
+                    jeanC(),anemo(),jeanFull();
                     hname = data[16].name;
                     hvision = data[16].vision;
                     hwep = data[16].weapon;
@@ -197,7 +270,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '7'){
-                    raidenC();
+                    raidenC(),electro(),raidenFull();
                     hname = data[27].name;
                     hvision = data[27].vision;
                     hwep = data[27].weapon;
@@ -215,7 +288,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '8'){
-                    kleeC();
+                    kleeC(),pyro(),kleeFull();
                     hname = data[20].name;
                     hvision = data[20].vision;
                     hwep = data[20].weapon;
@@ -233,7 +306,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '9'){
-                    razorC();
+                    razorC(),electro(),razorFull();
                     hname = data[28].name;
                     hvision = data[28].vision;
                     hwep = data[28].weapon;
@@ -251,7 +324,7 @@ function getNewName(){
                     document.getElementById('birthdate').innerHTML='Birthdate: '+hbirth;
                     document.getElementById('desc').innerHTML=hdesc;
                 }else if (lucky == '10'){
-                    eulaC();
+                    eulaC(),cryo(),eulaFull();
                     hname = data[11].name;
                     hvision = data[11].vision;
                     hwep = data[11].weapon;
