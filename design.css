@@ -1,0 +1,51 @@
+html{
+    background-image: url("assets/bg.jpg");
+    font-family: myFirstFont;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(zh-cn.ttf);
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.center{
+    position: relative;
+    top: 150px;
+    left: 30px;
+    color: rgb(31, 30, 30);
+}
+.character{
+
+    background-color: blanchedalmond;
+    width: 30%;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 200px;
+    right: 60%;
+}
+button{
+    background-color: rgb(192, 94, 140);
+    border-radius: 10px;
+    width: 250px;
+    height: 50px;
+    font-size: 1rem;
+    outline: none;
+    transition: ease-out 0.3s;
+    outline: none;
+    box-shadow: inset 0 0 0 0 rgb(140, 59, 97);
+    border: none;
+
+}
+button:hover{
+    box-shadow: inset 250px 0 0 0 rgb(140, 59, 97);
+}
+
+#number{
+    width: 150px;
+    color: black;
+}
