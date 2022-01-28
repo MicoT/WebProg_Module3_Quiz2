@@ -1,3 +1,6 @@
+function removestart(){
+    document.getElementById('start-text').remove();
+}
 function aetherC(){
     var charc = document.getElementById("image-charc");
     document.getElementById('image-charc').style.backgroundColor = "blanchedalmond"
@@ -146,7 +149,7 @@ function getNewName(){
                 console.log(data)
                 var lucky = document.getElementById('number').value;
                 if (lucky == '1'){
-                    aetherC(),anemo(),travelerFull();
+                    aetherC(),anemo(),travelerFull(),removestart();
                     hname = data[36].name;
                     hvision = data[36].vision;
                     hwep = data[36].weapon;
